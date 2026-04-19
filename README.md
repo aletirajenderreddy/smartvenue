@@ -1,63 +1,98 @@
-# SmartVenueX 🚀
+# Smart Venue
 
-**SmartVenueX** is a premium, production-grade Event Management SaaS designed to transform traditional event logistics into a seamless, real-time digital experience. Built for high-traffic environments, it features a sophisticated role-based architecture for Admins, Participants, and Vendors.
+![Badges](link-to-your-badges)
 
-## 🔗 Live Demo
-**[https://prompt-wars-e4ac8.web.app](https://prompt-wars-e4ac8.web.app)**
+## Table of Contents
+- [Introduction](#introduction)
+- [Tech Stack](#tech-stack)
+- [Prerequisites](#prerequisites)
+- [Project Structure](#project-structure)
+- [Installation Steps](#installation-steps)
+- [Environment Setup](#environment-setup)
+- [Usage Guides](#usage-guides)
+- [API Documentation](#api-documentation)
+- [Deployment Instructions](#deployment-instructions)
+- [Contributing Guidelines](#contributing-guidelines)
+- [Troubleshooting](#troubleshooting)
+- [Support](#support)
 
-## 💎 Key Features
+## Introduction
+The Smart Venue project aims to provide an innovative platform for managing event spaces. This README serves as a comprehensive guide to using and contributing to the project.
 
-### 🛡️ Admin Control Room
-*   **AI Event Generation**: Automatically generate professional event descriptions using Google Gemini AI.
-*   **Real-time Management**: Live participant tracking, stall management, and instant schedule updates.
-*   **Security & SOS**: Comprehensive Row-Level Security (RLS) and a dedicated SOS emergency system.
+## Tech Stack
+- **Frontend:** JavaScript, TypeScript
+- **Backend:** Node.js, Express
+- **Database:** Firebase
 
-### 🎓 Participant Experience
-*   **Dynamic QR Passes**: Instantly generated, client-side QR passes for seamless entry.
-*   **Live Engagement**: Real-time event schedules, crowd density maps, and mobile food ordering.
-*   **Personalized Dashboard**: View seat numbers, event details, and important contacts.
+## Prerequisites
+Before you begin, ensure you have met the following requirements:
+- Node.js installed
+- Firebase CLI installed
 
-### 🏪 Vendor/Stall Management
-*   **Live Order Tracking**: Real-time food and service order management with status updates.
-*   **Digital Presence**: Manage stall profiles and receive event-wide announcements.
+## Project Structure
+```
+/smart-venue
+├── public
+│   ├── index.html
+│   └── ...
+├── src
+│   ├── components
+│   ├── pages
+│   └── ...
+├── package.json
+└── README.md
+```
 
-## 🛠️ Tech Stack
+## Installation Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/smartvenue.git
+   ```
+2. Navigate into the directory:
+   ```bash
+   cd smartvenue
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
 
-*   **Frontend**: React (Vite)
-*   **Backend**: Supabase (PostgreSQL, Auth, Realtime)
-*   **AI**: Google Gemini AI
-*   **Styling**: Tailwind CSS + Framer Motion
-*   **Hosting**: Firebase Hosting
+## Environment Setup
+1. Create a `.env` file in the root directory and add your Firebase configurations:
+   ```bash
+   FIREBASE_API_KEY=your_api_key
+   FIREBASE_AUTH_DOMAIN=your_auth_domain
+   ```
 
-## 🎨 Design System
-*   **Aesthetic**: "Dim Blue" Premium SaaS look (Dark Mode).
-*   **Core Colors**: `#0B1220` (Background), `#111827` (Secondary), `#3B82F6` (Primary Blue).
-*   **UI Patterns**: Glassmorphism, radial glow effects, and smooth micro-animations.
+## Usage Guides
+- **For Users:** Guide on how to book venues
+- **For Admins:** Guide on managing venues
+- **For Developers:** Guide on contributing to the codebase
 
----
-
-## 🚀 Local Installation
-
-1.  **Clone the repo**:
-    ```bash
-    git clone https://github.com/YOUR_USERNAME/smartvenuex.git
+## API Documentation
+Here’s an overview of our API with code examples:
+- **GET `/api/venues`**
+    ```javascript
+    fetch('/api/venues')
+      .then(response => response.json())
+      .then(data => console.log(data));
     ```
-2.  **Install dependencies**:
-    ```bash
-    npm install
-    ```
-3.  **Environment Variables**:
-    Create a `.env.local` file with your credentials:
-    ```env
-    VITE_SUPABASE_URL=your_url
-    VITE_SUPABASE_ANON_KEY=your_key
-    VITE_GEMINI_API_KEY=your_key
-    ```
-4.  **Launch**:
-    ```bash
-    npm run dev
-    ```
 
----
+## Deployment Instructions for Firebase Hosting
+1. Build the project:
+   ```bash
+   npm run build
+   ```
+2. Deploy to Firebase:
+   ```bash
+   firebase deploy
+   ```
 
-*Redesigned and Optimized for Production.*
+## Contributing Guidelines
+We welcome contributions! Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) for details.
+
+## Troubleshooting
+If you encounter issues, please check the [FAQ](./FAQ.md) or open an issue on GitHub.
+
+## Support
+For support, please contact us at support@smartvenue.com or open an issue on GitHub.
