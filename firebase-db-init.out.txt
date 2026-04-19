@@ -1,0 +1,32 @@
+[33m[1m
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+[22m[39m
+You're about to initialize a Firebase project in this directory:
+
+  [1mC:\Users\linux\OneDrive\Desktop\prompt wars\smartvenuex[22m
+
+Before we get started, keep in mind:
+
+  [33m[1m* [22m[39mYou are initializing within an existing Firebase project directory
+
+[34m?[39m [1mAre you ready to proceed?[22m [2m(Y/n)[22m[35G[36G[2K[G[34m?[39m [1mAre you ready to proceed?[22m [2m(Y/n)[22m y[36G[35G[2K[G[32m√[39m [1mAre you ready to proceed?[22m [36mYes[39m[32G[33G[34G[35G[36G[37G[38G[39G[40G[41G[42G[43G[44G[45G[46G[47G[48G[49G[50G[51G[32G
+[?25h[1m
+[37m===[39m Project Setup[22m
+
+First, let's associate this project directory with a Firebase project.
+You can create multiple project aliases by running [1mfirebase use --add[22m, 
+
+[36m[1mi [22m[39m Using project prompt-wars-e4ac8 (prompt wars) .
+[1m
+[37m===[39m Database Setup[22m
+
+Firebase Realtime Database Security Rules allow you to define how your data should be
+structured and when your data can be read from and written to.
+
+[34m?[39m [1mWhat file should be used for Realtime Database Security Rules?[22m
+[2m(database.rules.json)[22m[1A[88G[1B
+[?25h

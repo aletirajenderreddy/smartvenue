@@ -1,0 +1,1 @@
+import { useEffect,useState } from 'react';import { subscribeStalls } from '../services/food.service';export default function useQueue(){const [stalls,setStalls]=useState([]);useEffect(()=>subscribeStalls(setStalls),[]);return stalls;}

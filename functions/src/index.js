@@ -1,0 +1,33 @@
+import express from 'express';
+import cors from 'cors';
+import { onRequest } from 'firebase-functions/v2/https';
+
+export { onUserCreate } from './auth/onUserCreate.js';
+export { generateQR } from './tickets/generateQR.js';
+export { bookArrivalSlot } from './tickets/bookArrivalSlot.js';
+export { validateEntry } from './tickets/validateEntry.js';
+export { scanExit } from './tickets/scanExit.js';
+export { crowdScheduler } from './crowd/crowdScheduler.js';
+export { anomalyDetect } from './crowd/anomalyDetect.js';
+export { sendExitWave } from './notifications/sendExitWave.js';
+export { sendArrivalAlert } from './notifications/sendArrivalAlert.js';
+export { sendEmergency } from './notifications/sendEmergency.js';
+export { sendBusEta } from './notifications/sendBusEta.js';
+export { createPaymentOrder } from './food/createPaymentOrder.js';
+export { processOrder } from './food/processOrder.js';
+export { markOrderCollected } from './food/markOrderCollected.js';
+export { exportReport } from './analytics/exportReport.js';
+export { suggestLostFoundMatches } from './lostfound/suggestMatches.js';
+export { createSosAlert } from './emergency/createSosAlert.js';
+export { assignResponder } from './emergency/assignResponder.js';
+export { manageBusSubscription } from './transport/manageBusSubscription.js';
+export { updateZoneControl } from './admin/updateZoneControl.js';
+export { updateStall } from './admin/updateStall.js';
+export { recordTriviaScore } from './engagement/recordTriviaScore.js';
+export { collectStamp } from './engagement/collectStamp.js';
+export { submitFeedback } from './feedback/submitFeedback.js';
+
+const app = express();
+app.use(cors({ origin: true }));
+app.get('/health', (_, res) => res.json({ ok: true }));
+export const api = onRequest(app);

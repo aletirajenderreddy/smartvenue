@@ -1,0 +1,14 @@
+{
+  "rules": {
+    "crowd": {
+      "live": {
+        ".read": "auth != null",
+        ".write": false
+      }
+    },
+    "$other": {
+      ".read": false,
+      ".write": false
+    }
+  }
+}

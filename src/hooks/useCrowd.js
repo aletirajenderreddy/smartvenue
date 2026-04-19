@@ -1,0 +1,1 @@
+import { useEffect } from 'react';import { subscribeZones } from '../services/crowd.service';import { useCrowdStore } from '../store/useCrowdStore';export default function useCrowd(){const setZones=useCrowdStore(s=>s.setZones);useEffect(()=>subscribeZones(setZones),[setZones]);}

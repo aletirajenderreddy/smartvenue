@@ -1,0 +1,41 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    function signed() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return signed() && request.auth.uid == userId;
+    }
+
+    match /profiles/{userId}/{fileName} {
+      allow read: if signed();
+      allow write: if isOwner(userId)
+        && request.resource.size < 5 * 1024 * 1024
+        && request.resource.contentType.matches('image/.*');
+    }
+
+    match /lost-items/{userId}/{fileName} {
+      allow read: if signed();
+      allow write: if isOwner(userId)
+        && request.resource.size < 8 * 1024 * 1024
+        && request.resource.contentType.matches('image/.*');
+    }
+
+    match /event-assets/{eventId}/{fileName} {
+      allow read: if signed();
+      allow write: if signed()
+        && firestore.get(/databases/(default)/documents/users/$(request.auth.uid)).data.role == 'admin'
+        && request.resource.size < 20 * 1024 * 1024;
+    }
+
+    match /qr/{userId}/{fileName} {
+      allow read, write: if isOwner(userId);
+    }
+
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

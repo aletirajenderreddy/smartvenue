@@ -1,0 +1,1 @@
+export const ROLES={ATTENDEE:'attendee',ADMIN:'admin',GATE:'gate_staff'}; export const NAV=[{label:'Home',to:'/'},{label:'Map',to:'/map'},{label:'Food',to:'/food'},{label:'Alerts',to:'/emergency'},{label:'Profile',to:'/profile/setup'}];

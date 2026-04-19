@@ -1,0 +1,1 @@
+import { GoogleGenerativeAI } from '@google/generative-ai'; export const geminiClient=new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY || ''); export const geminiModel=geminiClient.getGenerativeModel({model:'gemini-1.5-flash'});
